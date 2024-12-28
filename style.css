@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+html,
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #fdfdfe;
+}
+
+main {
+  display: flex;
+  max-width: 920px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+[class|="card"] {
+  color: white;
+  padding: 40px;
+}
+
+[class|="card"] img {
+  display: block;
+}
+
+[class|="card"] h1 {
+  font-family: "Big Shoulders Display", serif;
+  font-weight: 700;
+  margin: 40px 0;
+}
+
+[class|="card"] p {
+  font-family: "Lexend Deca", serif;
+  font-weight: 400;
+  margin-bottom: 100px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+[class|="card"] a {
+  display: block;
+  width: fit-content;
+  font-family: "Lexend Deca", serif;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: white;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+[class|="card"] a:hover,
+[class|="card"] a:active {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+.card-sedan {
+  background-color: var(--bright-orange);
+}
+
+.card-sedan a {
+  color: var(--bright-orange);
+}
+
+.card-suv {
+  background-color: var(--dark-cyan);
+}
+
+.card-suv a {
+  color: var(--dark-cyan);
+}
+
+.card-luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+.card-luxury a {
+  color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  [class|="card"] p {
+    margin-bottom: 40px;
+  }
+}
